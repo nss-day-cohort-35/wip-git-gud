@@ -11,3 +11,19 @@ const makeJournalEntryComponent = (entryObj) => {
 `;
 return newJournalObj;   
 }; */
+
+console.log("component.js is working")
+
+const webComponent = (name, img, description, URL, class) => {
+    resultHTML: function (item) {
+        return `
+        <div class=${item.class}>
+        <img class="componentImage"></img>
+        <h2 = ${item.name}</h2>
+        <p>${item.description}</p>
+        <p class = ${item.url}</p>
+        </div>`
+    }
+}
+
+console.log(webComponent)

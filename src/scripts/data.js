@@ -5,3 +5,13 @@ const API = {
             .then(response => response.json())
     }
 } */
+
+/* This is Gradi's fetch call draft  
+let getMeetUps = () =>
+{fetch(`https://www.eventbriteapi.com/v3/events/search/?q=sports&location.address=nashville&token=LCTRAOJH5AJUT32CZU2C`), {
+  "headers": {
+      "Accept": "application/json"
+  }
+}.then(response => response.json())
+.then(parsedResponse => console.log(parsedResponse))
+} */

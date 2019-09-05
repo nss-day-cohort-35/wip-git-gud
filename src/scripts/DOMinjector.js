@@ -7,16 +7,4 @@ function renderJournalEntries (journalEntryArray)  {
     for (let i = 0; i < journalEntryArray.length; i++) {
         entryInfo.innerHTML += makeJournalEntryComponent(journalEntryArray[i])
     }
-}  */
-
-console.log("is this working?")
-
-const injectDOM = {
-    addToDom(results) => {
-    console.log("add to dom called");
-    results.array.forEach(results => {
-        console.table(results);
-        const itineraryContainer=document.querySelector("resultsContainer")
-        itineraryContainer.innerHtml += webComponent.resultHTML(results);
-    });
-}
+}  

@@ -6,11 +6,11 @@ console.log(documentContainer)
 
 
 //This is the web component 
-let webComponent = (parks) => {
+let parkComponent = (parks) => {
     let name = parks.park_name
     let address = parks.mapped_location.human_address
     let note = parks.notes
-    console.log("webcomponnent funnction is called")
+    console.log("parkcomponent funnction is called")
     return `
     <div>
         <h2>${name}</h2>
@@ -19,25 +19,25 @@ let webComponent = (parks) => {
         </div>`
 }
 
-console.log(webComponent)
+console.log(parkComponent)
 
 //passes what it is given to the DOM
 let addToDom = (htmlString) => {
     documentContainer.innerHTML += htmlString;
 }
 
-//this is a fetch call to bring in the parks in Nashville//
-document.querySelector(".parksButton").addEventListener("click", parkFetcher);
-//add in code to look for the variable in the dropdown 
-//<option value="overall">How are you Feeling?</option>
-//
-
-function parkFetcher() {
-    fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=i4q8JB7V9yqEY0Pt9c3JmDswS`)
+//this is the button that defines parkType as the input from the dropdown, then calls the fetch call
+document.querySelector(".parksButton").addEventListener("click", function() {
+        parkType = document.querySelector("#parkFeature").value
+        parkFetcher(parkType);
+    })
+    //this is the fetch call that queries the API passing the parkType as the input
+function parkFetcher(parkArgument) {
+    fetch(`https://data.nashville.gov/resource/74d7-b74t.json?${parkArgument}=Yes&$$app_token=i4q8JB7V9yqEY0Pt9c3JmDswS`)
         .then(response => response.json())
         .then(parsedResponse =>
             parsedResponse.forEach(parkObj => {
-                let responseAsHTML = webComponent(parkObj)
+                let responseAsHTML = parkComponent(parkObj)
                 addToDom(responseAsHTML)
             }))
 }

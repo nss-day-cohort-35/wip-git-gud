@@ -21,6 +21,19 @@
             <fieldset>
                 <label for=""></label>
                 <input type="text" name="concerts" class="concertsInput">
+                <div class="musicSearch">
+                    <select name="searchByGenre" class="searchByGenre">
+                        <option value="Country">Country</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Alternative Rock">Alternative Rock</option> 
+                        <option value="Blues">Blues</option>   
+                        <option value="Folk">Folk</option>
+                        <option value="R&B">R&B</option>
+                        <option value="Soul">Soul</option>
+                    </select>
+                </div>
                 <button class="concertsButton" type="button">Show me the Concerts!</button>
             </fieldset>
         </form>
@@ -35,6 +48,25 @@
             <fieldset>
                 <label for=""></label>
                 <input type="text" name="parks" class="parksInput">
+                <label for="parkFeatures">Major Features</label>
+                <select type="text" name="parkFeatures" id="parkFeature">
+                              <option value="playground">Playground</option>
+                              <option value="dog_park">Dog Park</option>
+                              <option value="baseball_fields">Baseball Field</option>
+                              <option value="basketball_courts">Basketball Court</option>
+                              <option value="volleyball">Volleyball Court</option>
+                              <option value="soccer_fields">Soccer Field</option>
+                              <option value="football_multi_purpose_fields">Football Field</option>
+                              <option value="tennis_courts">Tennis Court</option>
+                              <option value="disc_golf">Disc Golf</option>
+                              <option value="skate_park">Skate Park</option>
+                              <option value="swimming_pool">Swimming Pool</option>
+                              <option value="golf_course">Golf Course</option>
+                              <option value="walk_jog_paths">Greenway</option>
+                              <option value="hiking_trails">Hiking Trail</option>
+                              <option value="horse_trails">Horse Trail</option>
+                              <option value="mountain_bike_trails">Mountain Bike Trail</option>
+                  </select>
                 <button class="parksButton" type="button">Show me the Parks!</button>
             </fieldset>
         </form>
@@ -52,10 +84,8 @@
         <p>This is the footer, maybe we can put a quote here about Nashville and sports?</p>
     </footer>
 </body>
-<script src="scripts/concerts.js"></script>
 <script src="scripts/parks.js"></script>
+<script src="scripts/concerts.js"></script>
 <script src="scripts/restaurants.js"></script>
-<script src="scripts/events.js"></script>
-<!-- <script src="scripts/main.js"></script> -->
 
 </html>

@@ -11,45 +11,59 @@
 
 <body>
     <header>
+     <div class="box">
+        <img src="images/nashvilleimage.png" alt="nashvillesportslogo" height="200" width="230">
+        </div>
+        <div class="headerTitle">
         <h1>Welcome Sport's Fans!</h1>
+        </div>
     </header>
-    <span>
-        Welcome to Music City Sport's Fans! This is where we will put tags on how to use this app
+    <p class="introText">
+        We are so excited that you are here to explore all the amazing things that
+        Nashville has to offer -especially in the world of sports! Using the form below
+        you will be able to find the top restaurants, parks, meetups, and concerts!
     </span>
     <section class="wrapper">
         <form>
             <fieldset>
-                <label for=""></label>
+                <label for="nashvilleConcerts">Find Upcoming Concerts</label>
                 <input type="text" name="concerts" class="concertsInput">
                 <button class="concertsButton" type="button">Show me the Concerts!</button>
             </fieldset>
         </form>
         <form>
             <fieldset>
-                <label for=""></label>
+                <label for="nashvilleRestaurants">Find Top Restaurants</label>
                 <input type="text" name="restaurants" class="restaurantsInput">
                 <button class="restaurantsButton" type="button">Show me the Eats!</button>
             </fieldset>
         </form>
         <form>
             <fieldset>
-                <label for=""></label>
+                <label for="nashvilleParks">Discover Nashville's Parks</label>
                 <input type="text" name="parks" class="parksInput">
                 <button class="parksButton" type="button">Show me the Parks!</button>
             </fieldset>
         </form>
         <form>
                 <fieldset>
-                    <label for=""></label>
+                    <label for="nashvilleMeetups">Find Upcoming Meetups</label>
                     <input type="text" name="meetups" class="meetupsInput">
                     <button class="meetupsButton" type="button">Show me the MeetUps!</button>
                 </fieldset>
             </form>
     </section>
-    <h2>These are your results</h2>
+    <hr>
+    <h2 class="resultsList">These are your results</h2>
     <article class ="resultsContainer"></article>
+    <hr>
+    <p class="intineraryList">Here is Your Itinerary</p>
     <footer>
-        <p>This is the footer, maybe we can put a quote here about Nashville and sports?</p>
+        <p class="footerQuote">“And I’m watching the sun go down this evening / And soon it will wake this town that’s made of dreams <br> 
+            But before it does, a new star will be shining / And that’s the way it is on the Nashville scene" <br>
+            Hank Williams Jr.</p>
+        <p class="information"><strong>&copy; WIP GIT GOOD</strong> <br> NSS Cohort 35 2019-2020</p>
+    </footer>
     </footer>
 </body>
 <script src="scripts/concerts.js"></script>

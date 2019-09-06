@@ -21,7 +21,7 @@ body {
 
 footer {
     background-color: #F2B807;
-    height: 150px;
+    height: 160px;
     color: #048ABF;
     text-align: center;
     
@@ -31,14 +31,16 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
+    font-family: 'Oswald';
 }
 
 .information {
     padding-top: 20px;
+    font-family: 'Oswald';
 }
 
 h1 {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -53,7 +55,7 @@ h1 {
 
 .introText {
     text-align: center;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Oswald';
     letter-spacing: 1px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -117,8 +119,8 @@ input {
  }
 
  .restaurantsButton {
-     margin-bottom: 20px;
-     margin-bottom: 35px;
+ margin-bottom: 20px;
+margin-bottom: 35px;
  background-color: #F2B807;
  padding: .5em;
  -moz-border-radius: 5px;
@@ -132,7 +134,7 @@ input {
  }
 
  .concertsButton {
- margin-bottom: 35px;
+ margin-bottom: 20px;
  background-color: #F2B807;
  padding: .5em;
  -moz-border-radius: 5px;
@@ -146,7 +148,7 @@ input {
 }
 
 .meetupsButton {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     background-color: #F2B807;
     padding: .5em;
     -moz-border-radius: 5px;
@@ -160,14 +162,8 @@ input {
    }
    
 
-.concertsButton:hover {
-    border: none;
-    background: orange;
-    box-shadow: 0px 0px 1px #777;
-   }
-
    .resultsList {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 30px;
@@ -179,7 +175,7 @@ input {
    }
 
    .intineraryList {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 30px;
@@ -197,5 +193,9 @@ input {
     margin-right: auto;
     border-style: none;
     height: 6px;
-    background-color: #F2B807;
+    background-color: #F2B807;  
+}
 
+.resultsContainer {
+    height: 500px;
+}

@@ -21,7 +21,7 @@ body {
 
 footer {
     background-color: #F2B807;
-    height: 160px;
+    height: 200px;
     color: #048ABF;
     text-align: center;
     
@@ -35,7 +35,6 @@ footer {
 }
 
 .information {
-    padding-top: 20px;
     font-family: 'Oswald';
 }
 
@@ -100,7 +99,6 @@ input {
     font-family: Verdana, sans-serif;
     font-size: 25px;
     color: white;
-    padding-top: 150px;
   }
 
  .parksButton {
@@ -162,15 +160,16 @@ margin-bottom: 35px;
    }
    
 
-   /* .resultsList {
+   .resultsList {
     font-family: 'Oswald';
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 30px;
-    text-align:center;
+    letter-spacing: 1px;
+    font-size: 45px;
+    text-align: center;
     color: #048ABF;
     padding-top: 20px;
     padding-bottom: 15px;
+    margin-top: 15px;
 
    }
 
@@ -183,7 +182,7 @@ margin-bottom: 35px;
     color: #048ABF;
     padding-top: 20px;
     padding-bottom: 15px;
-   } */
+   } 
 
    hr {
     display: block;
@@ -196,6 +195,43 @@ margin-bottom: 35px;
     background-color: #F2B807;  
 }
 
-.resultsContainer {
-    height: 500px;
+ .resultsContainer {
+    font-family: 'Oswald';
+    text-transform: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-align:center;
+    color: #048ABF; 
+}
+
+.result--section {
+    margin-left: 50px;
+    margin-right:s 50px;
+}
+
+h3 {
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-align:center;
+    color: #048ABF; 
+}
+
+p {
+    color: #048ABF;
+    font-size: 12px;
+    padding-bottom: 40px;
+}
+
+.footerQuote {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    font-family: 'Oswald';
+    color: #048ABF;
+    font-size: 12px;
+}
+
+.information {
+    padding-top: 10px;
+    font-family: 'Oswald';
 }

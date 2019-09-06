@@ -26,12 +26,13 @@ let addToDom = (htmlString) => {
     documentContainer.innerHTML += htmlString; 
     } 
 
-//this is a fetch call to bring in the parks in Nashville//
+
 document.querySelector(".parksButton").addEventListener("click", parkFetcher);
 //add in code to look for the variable in the dropdown 
 //<option value="overall">How are you Feeling?</option>
 //
 
+//this is a fetch call to bring in the parks in Nashville//
 function parkFetcher() {
      fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=i4q8JB7V9yqEY0Pt9c3JmDswS`)
         .then(response => response.json())

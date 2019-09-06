@@ -162,7 +162,7 @@ margin-bottom: 35px;
    }
    
 
-   .resultsList {
+   /* .resultsList {
     font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -183,7 +183,7 @@ margin-bottom: 35px;
     color: #048ABF;
     padding-top: 20px;
     padding-bottom: 15px;
-   }
+   } */
 
    hr {
     display: block;

@@ -1,3 +1,7 @@
+:root {
+    --mainColor: #2841cd;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +14,8 @@
     max-width:100%;
     height:170px;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 210px;
+    padding-top: 25px;
+    padding-bottom: 365px;
 }
 
 body {
@@ -24,6 +28,7 @@ footer {
     height: 200px;
     color: #048ABF;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
@@ -31,17 +36,18 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
 }
 
 .information {
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
     font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 3px;
+    padding-bottom: 10px;
 }
 
 .headerTitle {
@@ -54,7 +60,7 @@ h1 {
 
 .introText {
     text-align: center;
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 1px;
     padding-bottom: 20px;
     padding-left: 20px;
@@ -80,15 +86,16 @@ h1 {
 }
 
 input {
-    width: 100%;
+    width: 95%;
     padding: 12px 20px;
     margin: 10px 0;
     box-sizing: border-box;
     border: 0.5px solid #2841cd;
     border-radius: 4px;
-    font-family: Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     letter-spacing: 2px;
+    margin-left: 10px;
   }
 
   fieldset {
@@ -96,67 +103,73 @@ input {
   }
 
   label {
-    font-family: Verdana, sans-serif;
-    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
     color: white;
+    margin-left: 10px;
+    text-transform: uppercase;
   }
 
  .parksButton {
-     margin-bottom: 20px;
-     margin-bottom: 35px;
+  margin-bottom: 45px;
  background-color: #F2B807;
  padding: .5em;
  -moz-border-radius: 5px;
  -webkit-border-radius: 5px;
  border-radius: 6px;
  color: #fff;
- font-family: 'Oswald';
+ font-family: 'Montserrat', sans-serif;
  font-size: 18px;
  text-decoration: none;
  border: none;
+ margin-left: 10px;
  }
 
  .restaurantsButton {
  margin-bottom: 20px;
-margin-bottom: 35px;
+margin-bottom: 45px;
  background-color: #F2B807;
  padding: .5em;
  -moz-border-radius: 5px;
  -webkit-border-radius: 5px;
  border-radius: 6px;
  color: #fff;
- font-family: 'Oswald';
+ font-family: 'Montserrat', sans-serif;
  font-size: 18px;
  text-decoration: none;
  border: none;
+ margin-left: 10px;
  }
 
  .concertsButton {
- margin-bottom: 20px;
+ margin-bottom: 45px;
+ margin-top: 10px;
  background-color: #F2B807;
  padding: .5em;
  -moz-border-radius: 5px;
  -webkit-border-radius: 5px;
  border-radius: 6px;
  color: #fff;
- font-family: 'Oswald';
+ font-family: 'Montserrat', sans-serif;
  font-size: 18px;
  text-decoration: none;
  border: none;
+margin-left: 10px;
 }
 
 .meetupsButton {
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     background-color: #F2B807;
     padding: .5em;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 6px;
     color: #fff;
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     text-decoration: none;
     border: none;
+    margin-left: 10px;
    }
    
 
@@ -210,7 +223,7 @@ margin-bottom: 35px;
 }
 
 h3 {
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     text-align:center;
     color: #048ABF; 
@@ -226,12 +239,76 @@ p {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
     color: #048ABF;
     font-size: 12px;
 }
 
 .information {
     padding-top: 10px;
-    font-family: 'Oswald';
+    font-family: 'Montserrat', sans-serif;
 }
+
+/* Custom dropdown */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px; /* demo only */
+}
+  
+.custom-dropdown select {
+    background-color: white;
+    color: #F2B807;
+    font-size: inherit;
+    padding: .5em;
+    padding-right: 2.5em;	
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    -webkit-appearance: button; hide default arrow in chrome OSX;
+  }
+  
+  .custom-dropdown::before,
+  .custom-dropdown::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .custom-dropdown::after { /*  Custom dropdown arrow */
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.2em;
+    top: 50%;
+    margin-top: -.5em;
+  }
+  
+  .custom-dropdown::before { /*  Custom dropdown arrow cover */
+    width: 0.5em;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .custom-dropdown select[disabled] {
+    color: #F2B807;
+  }
+  
+  .custom-dropdown select[disabled]::after {
+    color: #F2B807;
+  }
+  
+  .custom-dropdown::before {
+    background-color:#F2B807;
+  }
+  
+  .custom-dropdown::after {
+    color: #F2B807;
+  }
+

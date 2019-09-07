@@ -23,7 +23,7 @@ let meetupsWebComponent = (meetups) => {
         </div>`
     }
 
-console.log(webComponent)
+console.log(meetupsWebComponent)
 
 let addToDomMeetups = (htmlString) => {
     documentContainer.innerHTML += htmlString; 

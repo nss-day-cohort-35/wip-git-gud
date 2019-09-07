@@ -12,28 +12,27 @@
 <body>
     <header>
      <div class="box">
-        <img src="images/nashvilleimage.png" alt="nashvillesportslogo" height="200" width="230">
+        <img src="images/nashvilleimage.png" alt="nashvillesportslogo" height="340" width="340">
         </div>
         <div class="headerTitle">
-        <h1>Welcome Sport's Fans!</h1>
+        <h1>Welcome to Nashville Sport's Fans!</h1>
+        <img src="images/sportsicons3.png" alt="sportsicons" height="100" width="500">
         </div>
     </header>
     <p class="introText">
-        We are so excited that you are here to explore all the amazing things that
-        Nashville has to offer -especially in the world of sports! <br>Using the form below
-        you will be able to find the top restaurants, parks, meetups, and concerts!
+        We are so excited that you are here to explore all the amazing things that our <br>city
+         has to offer -especially in the world of sports! <br><br>Using the form below
+        you will be able to find the top restaurants, parks, meetups, <br>and concerts
+        so you can create your perfect Nashville Itinerary!
     </span>
     <section class="wrapper">
         <form>
             <fieldset>
-<<<<<<< HEAD
-                <label for="nashvilleConcerts">Find Upcoming Concerts</label>
-                <input type="text" name="concerts" class="concertsInput" placeholder="What's  your favorite type of music? Select Below!">
-=======
-                <label for=""></label>
-                <input type="text" name="concerts" class="concertsInput">
-                <div class ="musicSearch">
-                    <select name="searchByGenre" class= "searchByGenre">
+                <label for="concerts">Search concerts by genre</label>
+                <br>
+                <div class ="custom-dropdown">
+                    <select name="searchByGenre" class= "searchByGenre" style="width:300px">
+                        <option value="overall"></option>
                         <option value="Country">Country</option>
                         <option value="Pop">Pop</option>
                         <option value="Rock">Rock</option>
@@ -45,53 +44,51 @@
                         <option value="Soul">Soul</option>
                     </select>
                 </div>
->>>>>>> master
-                <button class="concertsButton" type="button">Show me the Concerts!</button>
+                <br>
+                <button class="concertsButton" type="button">Tell me what concert I should buy tickets to!</button>
             </fieldset>
         </form>
         <form>
             <fieldset>
-                <label for="nashvilleRestaurants">Find Top Restaurants</label>
+                <label for="nashvilleRestaurants">Search top restaurants by cuisine</label>
                 <input type="text" name="restaurants" class="restaurantsInput" placeholder="What's your favorite type of cuisine? Type it here!">
-                <button class="restaurantsButton" type="button">Show me the Eats!</button>
+                <button class="restaurantsButton" type="button">Tell me where I should eat!</button>
             </fieldset>
         </form>
         <form>
             <fieldset>
-<<<<<<< HEAD
-                <label for="nashvilleParks">Discover Nashville's Parks</label>
-                <input type="text" name="parks" class="parksInput" placeholder="Have a favorite sport and want to play at a local park? Select Below!">
-=======
-                <label for=""></label>
-                <input type="text" name="parks" class="parksInput">
-                <label for="parkFeatures">Major Features</label>
-                  <select type="text" name="parkFeatures" id="parkFeature">
-                              <option value="playground">Playground</option>
-                              <option value="dog_park">Dog Park</option>
-                              <option value="baseball_fields">Baseball Field</option>
-                              <option value="basketball_courts">Basketball Court</option>
-                              <option value="volleyball">Volleyball Court</option>
-                              <option value="soccer_fields">Soccer Field</option>
-                              <option value="football_multi_purpose_fields">Football Field</option>
-                              <option value="tennis_courts">Tennis Court</option>
-                              <option value="disc_golf">Disc Golf</option>
-                              <option value="skate_park">Skate Park</option>
-                              <option value="swimming_pool">Swimming Pool</option>
-                              <option value="golf_course">Golf Course</option>
-                              <option value="walk_jog_paths">Greenway</option>
-                              <option value="hiking_trails">Hiking Trail</option>
-                              <option value="horse_trails">Horse Trail</option>
-                              <option value="mountain_bike_trails">Mountain Bike Trail</option>
+                <label for="parkFeatures">Search city parks by sports</label>
+                <br>
+                <div class ="custom-dropdown">
+                  <select class="text" name="parkFeatures" id="parkFeature">
+                             <option value="overall"></option>
+                              <option value="playground">🎠Playground</option>
+                              <option value="dog_park">🐶Dog Park</option>
+                              <option value="baseball_fields">⚾️Baseball Field</option>
+                              <option value="basketball_courts">🏀Basketball Court</option>
+                              <option value="volleyball">🏐Volleyball Court</option>
+                              <option value="soccer_fields">⚽️Soccer Field</option>
+                              <option value="football_multi_purpose_fields">🏈Football Field</option>
+                              <option value="tennis_courts">🎾Tennis Court</option>
+                              <option value="disc_golf">⛳️Disc Golf</option>
+                              <option value="skate_park">⛸Skate Park</option>
+                              <option value="swimming_pool">🏊🏽‍♂️Swimming Pool</option>
+                              <option value="golf_course">🏌Golf Course</option>
+                              <option value="walk_jog_paths">👟Greenway</option>
+                              <option value="hiking_trails">👣Hiking Trail</option>
+                              <option value="horse_trails">🐎Horse Trail</option>
+                              <option value="mountain_bike_trails">🚲Mountain Bike Trail</option>
                   </select> 
->>>>>>> master
-                <button class="parksButton" type="button">Show me the Parks!</button>
+                </div>
+                <br>
+                  <button class="parksButton" type="button">Tell me what Nashville park I should visit!</button>
             </fieldset>
         </form>
         <form>
                 <fieldset>
                     <label for="nashvilleMeetups">Find Upcoming Meetups</label>
                     <input type="date" name="meetups" class="meetupsInput" placeholder="Select a date below to see what's happening in the world of meetups!">
-                    <button class="meetupsButton" type="button">Show me the MeetUps!</button>
+                    <button class="meetupsButton" type="button">Tell me what meetup I should attend!</button>
                 </fieldset>
             </form>
     </section>
@@ -106,19 +103,12 @@
     <footer>
         <p class="footerQuote">“And I’m watching the sun go down this evening / And soon it will wake this town that’s made of dreams <br> 
             But before it does, a new star will be shining / And that’s the way it is on the Nashville scene" <br>
-            Hank Williams Jr.</p>
+            <strong>Hank Williams Jr.</strong></p>
         <p class="information"><strong>&copy; WIP GIT GOOD</strong> <br> NSS Cohort 35 2019-2020</p>
     </footer>
 
 </body>
 <script src="scripts/parks.js"></script>
-<<<<<<< HEAD
 <script src="scripts/restaurants.js"></script>
 <script src="scripts/concerts.js"></script>
 <script src="scripts/meetups.js"></script>
-
-=======
-<script src="scripts/concerts.js"></script>
->>>>>>> master
-
-</html>

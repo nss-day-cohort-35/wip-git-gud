@@ -1,7 +1,7 @@
 console.log("this is working")
 
 //looks for the first HTML element that has a class of mainContainer and stores it as a variable, this links to DOM
-const documentContainer = document.querySelector(".resultsContainer")
+const documentContainer = document.querySelector("#parksContainer")
 console.log(documentContainer)
 
 

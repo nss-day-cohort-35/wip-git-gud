@@ -21,7 +21,7 @@ let restaurantsComponent = (restaurantsObj) => {
         <h2>${cuisines}</h2> 
         <p>${address}</p>
         <p>${rating}</p>
-        <button class="save_button" id="${id}">Save to Itinerary</button>
+        <button class="save_button_restaurant" id="${id}">Save to Itinerary</button>
         </div>`
 }
 
@@ -38,9 +38,9 @@ let addRestaurantsToDom = (htmlString) => {
     documentContainer.innerHTML += htmlString;
 }
 
-//itiinerary DOM injector
+//itinerary DOM injector
 let postItinToDom = (itineraryHTML) => {
-    let itineraryContainerEl = document.querySelector(".itineraryContainer")
+    let itineraryContainerEl = document.querySelector("#restuarantItinerary")
     itineraryContainerEl.innerHTML = itineraryHTML
 }
 
@@ -65,19 +65,20 @@ function restaurantsFetcher(search) {
                     addRestaurantsToDom(responseAsHTML)
                 })
             } else {
-                documentContainer.querySelector(".resultsContainer").innerHTML += "<p>Sorry, no results found"
+                documentContainer.querySelector(".restaurantContainer").innerHTML += "<p>Sorry, no results found"
             }
         })
 }
 
 //Save button
 document.querySelector(".resultsContainer").addEventListener("click", function() {
-    if (event.target.classList.contains("save_button")) {
+    if (event.target.classList.contains("save_button_restaurant")) {
         let clickId = event.target.id
         fetch(`https://developers.zomato.com/api/v2.1/restaurant?res_id=${clickId}&apikey=487982b1173d845c11c1a0a51318b411`)
             .then(response => response.json())
             .then(parsedResponse => {
                 // console.log(parsedResponse)
+                // let restSelection = document.querySelector("#restaurantItinerary")
                 let restaurantItineraryName = parsedResponse.name
                 // console.log(restaurantItineraryName)
                 let itinerary = itineraryRestComponent(restaurantItineraryName)

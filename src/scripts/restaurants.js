@@ -5,6 +5,7 @@
 // console.log(documentContainer)
 
 
+
 //This is the web component 
 let restaurantsComponent = (restaurantsObj) => {
     let id = restaurantsObj.restaurant.id

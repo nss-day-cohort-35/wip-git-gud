@@ -14,6 +14,7 @@ let concertComponent = (concerts) => {
     }
 
 //passes what it is given to the DOM
+
 let concertResultSection = document.querySelector("#concertsResults")
 let addToConcertDom = (htmlString) => {
     concertResultSection.innerHTML += htmlString; 
@@ -26,6 +27,8 @@ concertType = document.querySelector(".searchByGenre").value
 concertGrab(concertType);
 
 })
+
+// event listener that puts selected result in itinerary section 
 
 concertResultSection.addEventListener("click", event => {
     if (event.target.id.startsWith("concertSaveButton")){

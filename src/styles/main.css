@@ -287,7 +287,8 @@ p {
     border-radius: 3px;
     text-indent: 0.01px;
     text-overflow: '';
-    -webkit-appearance: button; hide default arrow in chrome OSX;
+    -webkit-appearance: button; 
+    /* hide default arrow in chrome OSX; */
   }
   
   .custom-dropdown::before,

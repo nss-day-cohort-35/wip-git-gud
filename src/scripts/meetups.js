@@ -1,4 +1,4 @@
-console.log("this is working")
+
 
 // //looks for the first HTML element that has a class of mainContainer and stores it as a variable, this links to DOM
 // const documentContainer = document.querySelector(".resultsContainer")
@@ -6,32 +6,42 @@ console.log("this is working")
 
 //This is the web component 
 let meetupsWebComponent = (meetups) => {
+    let id = meetups.id
     let name = meetups.name.text
     let date = meetups.start.local.split("T")[0]
     let newDate = date.split("-")
     let reversedArray = newDate.reverse()
     let reversedDate = reversedArray.join("-")
     let about = meetups.summary
+    let button_id = meetups.id
     // let description = meetups.description.text
     // let url = meetups.url
-    console.log("webcomponnent funnction is called")
+    
     return `
     <div>
-        <h2>${name}</h2>
+        <h2 id="${id}">${name}</h2>
         <h3>${reversedDate}</h3>
-        <p>${about}Learn More about the Event</p>
+        <button class="save_button" id="meetupsSaveButton--${id}">Save to itinerary</button>
         </div>`
     }
 
-console.log(meetupsWebComponent)
+/* figure out when I put <p>${about}</p> in the dom building above below h3 and above the button class the button doesn't 
+show up as a button but instead just text on the same line as paragraph text*/
 
-let addToDomMeetups = (htmlString) => {
-    documentContainer.innerHTML += htmlString; 
-    } 
 
-//this is a fetch call to bring in the parks in Eventbrite API events//
+
+// let addToDomMeetups = (htmlString) => {
+//     documentContainer.innerHTML += htmlString; 
+//     } 
+
+let meetupsResultsSection = document.querySelector("#meetupsResults")
+let addToItineraryDom = (htmlString) => {
+    meetupsResultsSection.innerHTML += htmlString;
+}
+
+//this is a fetch call to bring in the events in Eventbrite API events//
 function meetupsFetcher () {
-fetch(`https://www.eventbriteapi.com/v3/events/search/?categories=108&location.address=nashville&start_date.range_start=2019-09-06T02:00:00&start_date.range_end=2019-09-07T02:00:00&token=LCTRAOJH5AJUT32CZU2C`, {
+fetch(`https://www.eventbriteapi.com/v3/events/search/?categories=108&location.address=nashville&token=LCTRAOJH5AJUT32CZU2C`, {
 "headers": {
     "Authorization": "Bearer LCTRAOJH5AJUT32CZU2C",
       "Accept": "application/json"
@@ -40,9 +50,9 @@ fetch(`https://www.eventbriteapi.com/v3/events/search/?categories=108&location.a
  .then(response => response.json())
  .then(parsedResponse => {
     console.log(parsedResponse)
-     parsedResponse.events.forEach(meetupsObj => {
-         let responseAsHTML = meetupsWebComponent(meetupsObj)
-         addToDomMeetups(responseAsHTML)
+     parsedResponse.events.forEach((meetupsObj, i) => {
+         let responseAsHTML = meetupsWebComponent(meetupsObj, i)
+         addToItineraryDom (responseAsHTML)
      })})
     }
 
@@ -59,29 +69,17 @@ document.querySelector(".meetupsButton").addEventListener("click", meetupsFetche
     //<option value="overall">How are you Feeling?</option>
     //
     
-// //this is a fetch call to bring in the parks in Nashville//
-//     function meetupsFetcher() {
-//          fetch(`https://data.nashville.gov/resource/74d7-b74t.json?$$app_token=i4q8JB7V9yqEY0Pt9c3JmDswS`)
-//             .then(response => response.json())
-//             .then(parsedResponse => 
-//              parsedResponse.forEach(parkObj => {
-//                  let responseAsHTML = webComponent(parkObj)
-//                  addToDomMeetups(responseAsHTML)
-//             }))
-//         }
 
 var dateControl = document.querySelector('input[type="date"]');
 dateControl.value = '2019-09-10';
 
-// var string1 = "";
-// var object1 = 
-// {a: 1, 
-//  b: 2, 
-// c: 3};
 
-// for (let property1 in object1) {
-//   string1 += object1[property1];
-// }
 
-// console.log(string1);
-// // expected output: "123"
+meetupsResultsSection.addEventListener("click", event => {
+    if (event.target.id.startsWith("meetupsSaveButton")) {
+        let meetupsID = event.target.id.split("--")[1]
+        let meetupsName = document.getElementById(meetupsID)
+        let itinerarySection = document.getElementById("meetupsItinerary")
+        itinerarySection.appendChild(meetupsName)
+    }
+})

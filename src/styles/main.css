@@ -42,7 +42,7 @@ body {
 
 footer {
     background-color: #F2B807;
-    height: 200px;
+    height: auto;
     color: #048ABF;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -52,7 +52,7 @@ footer {
 .footerQuote {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 20px;
+    margin-top: 45px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -91,7 +91,7 @@ h1 {
     background-color:#048ABF;
     width: 600px;
     padding-top: 20px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     padding-left: 20px;
     padding-right: 20px;
     display: block;
@@ -189,8 +189,23 @@ margin-left: 10px;
     margin-left: 10px;
    }
    
+.save_button {
+margin-top: 20px;  
+margin-bottom: 45px;
+ background-color: #F2B807;
+ padding: .5em;
+ -moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 6px;
+ color: #fff;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 18px;
+ text-decoration: none;
+ border: none;
+ margin-left: 10px;
+   }
 
-   .resultsList {
+.resultsList {
     font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -203,7 +218,7 @@ margin-left: 10px;
 
    }
 
-   .intineraryList {
+.intineraryList {
     font-family: 'Oswald';
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -214,7 +229,7 @@ margin-left: 10px;
     padding-bottom: 15px;
    } 
 
-   hr {
+hr {
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -234,14 +249,25 @@ margin-left: 10px;
     color: #048ABF; 
 }
 
-.result--section {
+.itineraryContainer {
+    margin-bottom: 45px;
+}
+
+/* .result--section {
     margin-left: 50px;
     margin-right:s 50px;
+} */
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-align:center;
+    color: #048ABF; 
 }
 
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     text-align:center;
     color: #048ABF; 
 }

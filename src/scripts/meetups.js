@@ -49,7 +49,6 @@ fetch(`https://www.eventbriteapi.com/v3/events/search/?categories=108&location.a
  })
  .then(response => response.json())
  .then(parsedResponse => {
-    console.log(parsedResponse)
      parsedResponse.events.forEach((meetupsObj, i) => {
          let responseAsHTML = meetupsWebComponent(meetupsObj, i)
          addToItineraryDom (responseAsHTML)

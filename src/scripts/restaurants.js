@@ -7,25 +7,40 @@ console.log("this is working")
 
 //This is the web component 
 let restaurantsComponent = (restaurantsObj) => {
+    let id = restaurantsObj.restaurant.id
     let name = restaurantsObj.restaurant.name
     let cuisines = restaurantsObj.restaurant.cuisines
     let address = restaurantsObj.restaurant.location.address
     let rating = restaurantsObj.restaurant.user_rating.aggregate_rating
     console.log("restaurant component function is being called")
+        //this is the apple pie, the DOM injector is the server
     return `
     <div>
         <h2>${name}</h2>
         <h2>${cuisines}</h2> 
         <p>${address}</p>
         <p>${rating}</p>
+        <button class="save_button" id="${id}">Save to Itinerary</button>
         </div>`
 }
 
+
+
 console.log(restaurantsComponent)
 
-//passes what it is given to the DOM
+//HTML Builder for itinerary
+let itineraryRestComponent = (name) => {
+        return `Restaurant: ${name}`
+    }
+    //passes what it is given to the DOM
 let addRestaurantsToDom = (htmlString) => {
     documentContainer.innerHTML += htmlString;
+}
+
+//itiinerary DOM injector
+let postItinToDom = (itineraryHTML) => {
+    let itineraryContainerEl = document.querySelector(".itineraryContainer")
+    itineraryContainerEl.innerHTML = itineraryHTML
 }
 
 //this is a button that calls the fetch call to bring in the parks in Nashville//
@@ -54,27 +69,19 @@ function restaurantsFetcher(search) {
         })
 }
 
+//Save button
+document.querySelector(".resultsContainer").addEventListener("click", function() {
+    if (event.target.classList.contains("save_button")) {
+        let clickId = event.target.id
+        fetch(`https://developers.zomato.com/api/v2.1/restaurant?res_id=${clickId}&apikey=487982b1173d845c11c1a0a51318b411`)
+            .then(response => response.json())
+            .then(parsedResponse => {
+                console.log(parsedResponse)
+                let restaurantItineraryName = parsedResponse.name
+                console.log(restaurantItineraryName)
+                let itinerary = itineraryRestComponent(restaurantItineraryName)
+                postItinToDom(itinerary)
 
-
-
-// const restaurantSearch = (searchTerm) => {
-//         return fetch(`https://developers.zomato.com/api/v2.1/search?q=${searchTerm}&entity_id=1138&entity_type=city&start=first&sort=rating&apikey=98b3e8584106245a199e8c4987ab27b0`)
-//             .then(restaurants => restaurants.json())
-//             .then(parsedRestaurants => {
-//                 addFoodToDom(parsedRestaurants.restaurants)
-//                 console.log(parsedRestaurants)
-//             })
-//     }
-//     /* pulls name from the array*/
-// const restaurantsNashville = (foodInNash) => {
-//         return `<p>${foodInNash.restaurant.name}</p>`
-//     }
-//     /*display restaurant names to the dom*/
-// function addFoodToDom(foodInNash) {
-//     foodInNash.forEach(restaurantObj => {
-//         restoContainer.innerHTML += restaurantsNashville(restaurantObj);
-//     });
-// }
-// const restoContainer = document.querySelector("#nashFood");
-// /*calls function that contains fetch*/
-// restaurantSearch("");
+            })
+    }
+})

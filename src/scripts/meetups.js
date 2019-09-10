@@ -1,5 +1,13 @@
 
-
+ //clear button
+ document.querySelector("#clearButton").addEventListener("click", event => {
+    
+    document.getElementById("meetupsResults").innerHTML = "";
+    document.getElementById("concertsResults").innerHTML = "";
+    document.getElementById("restaurantsContainer").innerHTML = "";
+    document.getElementById("parksContainer").innerHTML = "";
+    }
+) 
 // //looks for the first HTML element that has a class of mainContainer and stores it as a variable, this links to DOM
 // const documentContainer = document.querySelector(".resultsContainer")
 // console.log(documentContainer)

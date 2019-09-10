@@ -204,7 +204,37 @@ margin-bottom: 45px;
  border: none;
  margin-left: 10px;
    }
+.save_button_parks {
+    margin-top: 20px;  
+    margin-bottom: 45px;
+     background-color: #F2B807;
+     padding: .5em;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 6px;
+     color: #fff;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 18px;
+     text-decoration: none;
+     border: none;
+     margin-left: 10px;
+       }
 
+.save_button_restaurant {
+    margin-top: 20px;  
+    margin-bottom: 45px;
+     background-color: #F2B807;
+     padding: .5em;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     border-radius: 6px;
+     color: #fff;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 18px;
+     text-decoration: none;
+     border: none;
+     margin-left: 10px;
+       }       
 .resultsList {
     font-family: 'Oswald';
     text-transform: uppercase;

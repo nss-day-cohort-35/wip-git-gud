@@ -18,9 +18,10 @@ let restaurantsComponent = (restaurantsObj) => {
     return `
     <div>
         <h2>${name}</h2>
-        <h2>${cuisines}</h2> 
-        <p>${address}</p>
-        <p>${rating}</p>
+        <br>
+        <h3>Type of Cuisine: ${cuisines}</h3> 
+        <h3>${address}</h3>
+        <h3>⭐️${rating}⭐️</h3>
         <button class="save_button_restaurant" id="${id}">Save to Itinerary</button>
         </div>`
 }

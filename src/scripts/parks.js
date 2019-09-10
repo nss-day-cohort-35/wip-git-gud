@@ -18,9 +18,11 @@ let parkComponent = (parks, index) => {
     return `
     <section id="parkComponent--${parkId}">
         <h2 id="parkName--${parkId}">Name: ${name}</h2>
-        <h2>Address: ${address}</h2>
-        <p>Notes: ${note}</p>
-        <p>Major Feature ${parkFeatureComp}</p>
+        <br>
+        <h3>Address: ${address}</h2>
+        <br>
+        <h3>Notes: ${note}</p>
+        <h3>Major Feature: ${parkFeatureComp}</p>
         <button class="save_button_parks" id="parkSave--${parkId}">Save to Itinerary</button>
         </section>`;
  
